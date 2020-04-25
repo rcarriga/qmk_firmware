@@ -1,4 +1,5 @@
 .history/
+.ccls-cache/
 .dep
 *.o
 *.bin
