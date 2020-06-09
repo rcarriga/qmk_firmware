@@ -245,15 +245,28 @@ void eeconfig_init_kb(void) {  // EEPROM is getting reset!
 #ifndef PLANCK_EZ_USER_LEDS
 
 #ifndef PLANCK_EZ_LED_LOWER
-#    define PLANCK_EZ_LED_LOWER 3
+#    define PLANCK_EZ_LED_LOWER 1
 #endif
 #ifndef PLANCK_EZ_LED_RAISE
-#    define PLANCK_EZ_LED_RAISE 4
+#    define PLANCK_EZ_LED_RAISE 2
 #endif
 #ifndef PLANCK_EZ_LED_ADJUST
-#    define PLANCK_EZ_LED_ADJUST 6
+#    define PLANCK_EZ_LED_ADJUST 3
 #endif
 
+/*
+ * For some reason these defaults are different to the layers defined by Oryx.
+ * Left here in case it's needed for future.
+ * #ifndef PLANCK_EZ_LED_LOWER
+ * #    define PLANCK_EZ_LED_LOWER 3
+ * #endif
+ * #ifndef PLANCK_EZ_LED_RAISE
+ * #    define PLANCK_EZ_LED_RAISE 4
+ * #endif
+ * #ifndef PLANCK_EZ_LED_ADJUST
+ * #    define PLANCK_EZ_LED_ADJUST 6
+ * #endif
+ */
 layer_state_t layer_state_set_kb(layer_state_t state) {
     planck_ez_left_led_off();
     planck_ez_right_led_off();
